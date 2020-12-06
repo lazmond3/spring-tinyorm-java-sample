@@ -19,9 +19,9 @@ public class TinyOrmDb {
 //        String dbuser = "root";
 //        String dbpassword = "";
         Connection connection = DriverManager.getConnection(
-                dbproperties.url,
-                dbproperties.user,
-                dbproperties.password
+                dbproperties.getUrl(),
+                dbproperties.getUsername(),
+                dbproperties.getPassword()
         );
         TinyORM db = new TinyORM(connection);
         return db;
