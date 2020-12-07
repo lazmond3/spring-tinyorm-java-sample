@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConstructorBinding;
 
 @ConfigurationProperties("spring.datasource")
-//@ConstructorBinding
+@ConstructorBinding
 @Getter
 @Setter
 @RequiredArgsConstructor
@@ -15,5 +15,4 @@ public class DbProperties {
     private final String url;
     private final String username;
     private final String password;
-
 }
